@@ -1,8 +1,8 @@
-<img width="1943" height="1093" alt="image" src="https://github.com/user-attachments/assets/cc2ff955-17c2-48c7-81c8-479a0f061850" />
+<img src="./assets/my-portfolio-preview.png" width="1943" alt="Portfolio Preview" />
 
-# DevPortfolio Template
+# My Portfolio
 
-A modern, minimalist portfolio built with Astro and Tailwind CSS. Perfect for developers looking to showcase their skills, experience, and projects in a clean, professional way.
+
 
 ## Built With
 

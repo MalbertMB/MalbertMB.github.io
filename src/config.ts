@@ -4,10 +4,9 @@ export const siteConfig = {
   description: "Portfolio website of Albert Marín",
   accentColor: "#1d4ed8",
   social: {
-    email: "your-email@example.com",
+    email: "albert.marin.bl@gmail.com",
     linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    github: "https://github.com/MalbertMB",
   },
   aboutMe:
     "",
