@@ -10,7 +10,7 @@ export const siteConfig = {
   },
   aboutMe:
     "",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
+  skills: ["Python", "Java", "SQL", "Docker", "C", "C++"],
   projects: [
     {
       name: "AI Dev Roundup Newsletter",
