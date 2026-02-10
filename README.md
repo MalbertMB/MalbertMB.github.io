@@ -1,4 +1,4 @@
-<img src="./assets/my-portfolio-preview.png" width="1943" alt="Portfolio Preview" />
+<img src="./public/my-portfolio-preview.png" width="1943" alt="Portfolio Preview" />
 
 # My Portfolio
 
