@@ -11,7 +11,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
     <div
       class="flex flex-col md:flex-row md:items-center md:justify-between gap-8"
     >
-      <div class="flex flex-col gap-4">
+      <div 
+        class="flex flex-col gap-4 footer-item opacity-0 translate-y-8 transition-all duration-600 ease-out"
+        style="transition-delay: 0ms"
+      >
         <h3 class="text-2xl font-bold text-gray-800">
           {siteConfig.name}
         </h3>
@@ -121,7 +124,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         </div>
       </div>
 
-      <div class="hidden md:block flex flex-col md:items-end gap-4">
+      <div 
+        class="hidden md:block flex flex-col md:items-end gap-4 footer-item opacity-0 translate-y-8 transition-all duration-600 ease-out"
+        style="transition-delay: 100ms"
+      >
         <nav class="flex gap-x-8">
           <a
             href="#about"
@@ -161,13 +167,13 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         </nav>
         <p class="text-sm text-gray-500">
           © {new Date().getFullYear()}
-          {siteConfig.name}. All rights reserved.
+          {siteConfig.name}.
+          All rights reserved.
         </p>
       </div>
     </div>
   </div>
 
-  <!-- Decorative pattern -->
   <div class="absolute inset-0 -z-10 overflow-hidden">
     <svg
       aria-hidden="true"
@@ -192,3 +198,38 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
     </svg>
   </div>
 </footer>
+
+<script>
+  // Simple Intersection Observer to trigger animations on scroll
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1 // Trigger when 10% of the item is visible
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Element enters view: Show it
+        entry.target.classList.remove('opacity-0', 'translate-y-8');
+        entry.target.classList.add('opacity-100', 'translate-y-0');
+      } else {
+        // Element leaves view: Reset to hidden state so it animates again
+        entry.target.classList.remove('opacity-100', 'translate-y-0');
+        entry.target.classList.add('opacity-0', 'translate-y-8');
+      }
+    });
+  }, observerOptions);
+
+  // Target all elements with the class 'footer-item'
+  document.addEventListener('astro:page-load', () => {
+     document.querySelectorAll('.footer-item').forEach((el) => {
+      observer.observe(el);
+    });
+  });
+
+  // Fallback for initial load if View Transitions aren't used
+  document.querySelectorAll('.footer-item').forEach((el) => {
+      observer.observe(el);
+  });
+</script>

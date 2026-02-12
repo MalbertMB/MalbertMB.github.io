@@ -8,7 +8,9 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
     <section id="projects" class="p-8 sm:p-12 md:p-16 lg:p-24">
       <div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          <div class="lg:col-span-4">
+          
+          {/* Modified: Title Container with Animation Classes */}
+          <div class="lg:col-span-4 project-card opacity-0 translate-y-8 transition-all duration-600 ease-out">
             <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
               Projects
             </h2>
@@ -29,14 +31,18 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                       rel: "noopener noreferrer",
                     }
                   : {};
-
+                
+                const animationDelay = `${index * 100}ms`;
                 return (
-                  <div class="group relative">
+                  <div 
+                    class="group relative project-card opacity-0 translate-y-8 transition-all duration-600 ease-out"
+                    style={`transition-delay: ${animationDelay}`}
+                  >
                     <Component
                       {...linkProps}
                       class={`block relative p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 ${
                         project.link
-                          ? "hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1"
+                          ? "hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1 hover:scale-[1.01]"
                           : ""
                       }`}
                     >
@@ -72,10 +78,48 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                         </div>
 
                         <p
-                          class={`text-base sm:text-lg text-gray-600 leading-relaxed ${project.link ? "pr-12 sm:pr-14 md:pr-16" : ""}`}
+                          class={`text-base sm:text-lg text-gray-600 leading-relaxed ${
+                            project.link ? "pr-12 sm:pr-14 md:pr-16" : ""
+                          }`}
                         >
                           {project.description}
                         </p>
+
+                        {/* Sub-projects Rendering Logic */}
+                        {project.subProjects && (
+                          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                            {project.subProjects.map((sub) => (
+                              <a
+                                href={sub.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="block p-4 bg-white rounded-lg border border-gray-200 hover:border-gray-400 hover:shadow-md transition-all duration-300 group/sub"
+                              >
+                                <div class="flex justify-between items-start mb-2">
+                                  <h4 class="font-bold text-gray-900 text-sm sm:text-base">
+                                    {sub.title}
+                                  </h4>
+                                  <svg
+                                    class="w-4 h-4 text-gray-400 transition-transform duration-300 group-hover/sub:translate-x-0.5 group-hover/sub:-translate-y-0.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M7 17L17 7M17 7H7M17 7V17"
+                                    />
+                                  </svg>
+                                </div>
+                                <p class="text-xs sm:text-sm text-gray-600 leading-snug">
+                                  {sub.details}
+                                </p>
+                              </a>
+                            ))}
+                          </div>
+                        )}
 
                         {project.skills && project.skills.length > 0 && (
                           <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
@@ -102,3 +146,33 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
     </section>
   )
 }
+
+<script>
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('opacity-0', 'translate-y-8');
+        entry.target.classList.add('opacity-100', 'translate-y-0');
+      } else {
+        entry.target.classList.remove('opacity-100', 'translate-y-0');
+        entry.target.classList.add('opacity-0', 'translate-y-8');
+      }
+    });
+  }, observerOptions);
+
+  document.addEventListener('astro:page-load', () => {
+     document.querySelectorAll('.project-card').forEach((el) => {
+      observer.observe(el);
+    });
+  });
+
+  document.querySelectorAll('.project-card').forEach((el) => {
+      observer.observe(el);
+  });
+</script>
