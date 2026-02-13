@@ -31,7 +31,7 @@ export const siteConfig = {
       name: "Hybrid Phishing Detector AI",
       description:
         "Developed a dual-layer detection engine using the UCI Phiusiil Phishing URL Dataset, achieving 99.56% accuracy. Combined a Q-Learning agent for state-space pattern memorization with a KNN fallback to classify zero-day URLs.",
-      link: "#",
+      link: "https://github.com/MalbertMB/AI-hybrid-phishing-detector",
       skills: ["Python", "Reinforcement Learning", "KNN", "Q-Learning", "Scikit-Learn", "Data Discretization"],
     },
     {
