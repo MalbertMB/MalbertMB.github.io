@@ -80,7 +80,7 @@ export const siteConfig = {
       title: "Admissions & Health Systems Support",
       companyUrl: "https://hospiolot.com/", 
       dateRange: "Summers 2023 – 2025 (3 Consecutive Tenures)",
-      recommendationLink: "./public/recommendation-letter.pdf", 
+      recommendationLink: "/recommendation-letter.pdf", 
       bullets: [
         "Utilized SAVAC (Sanitary ERP) to coordinate patient diagnostics (TAC, RX, Analytics) and flow within a high-pressure clinical environment.",
         "Entrusted with GDPR-protected health documentation and medical agendas, ensuring data integrity and patient confidentiality.",
