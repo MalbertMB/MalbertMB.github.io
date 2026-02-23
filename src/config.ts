@@ -51,7 +51,7 @@ export const siteConfig = {
     {
       name: "ML-Market Predictor",
       description:
-        "Quantitative stock price forecasting engine. Utilizes Mean Absolute Error (MAE) as the primary loss metric to bridge the gap between predicted trends and real-market volatility.",
+        "Modular machine learning pipeline for forecasting daily stock prices and simulating trading strategies. It evaluates model accuracy using absolute and percentage errors, and includes a backtesting engine to compare predictive trading ROI against a traditional buy-and-hold approach.",
       link: "https://github.com/MalbertMB/ML-Market-Predictor",
       skills: ["Python", "Deep Learning", "Predictive Analytics", "Alpaca API", "Pandas", "Scikit-Learn"],
     },
