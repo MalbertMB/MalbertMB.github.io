@@ -42,11 +42,11 @@ export const siteConfig = {
       skills: ["AndroidXML", "Java", "RxJava", "Google Maps API", "Firebase", "Cloudinary"],
     },
     {
-      name: "Volatility-Adjusted Trading Framework (in development)",
+      name: "TFT-GNN Evolutionary Graph Trading System (Bachelor's Thesis)",
       description:
-        "Developing an automated trading system utilizing Donchian Channels and ADX as my bachelor's thesis. The framework is designed to evaluate performance through Sharpe Ratio and Average Return per Trade, utilizing Alpaca API for real-time market data and a local SQL caching layer for OHLC and volume data to minimize API calls.",
-      link: "https://github.com/MalbertMB/alpaca-donchian-adx-vf-bot",
-      skills: ["Python", "Algorithmic Trading", "Risk Management", "Alpaca API", "SQL", "Pandas"],
+        "Developing an autonomous trading system for my bachelor's thesis that combines deep learning with real-time market infrastructure. The predictive engine uses a hybrid Temporal Fusion Transformer (TFT) and Graph Neural Network (GNN) architecture with a dynamic adjacency matrix to model spatial-temporal market relationships. Integrated with the Alpaca API for live OHLC data and paper trading, the system utilizes fractional differentiation for feature engineering and Monte Carlo simulations for robust risk and maximum drawdown evaluation.",
+      link: "https://github.com/MalbertMB/alpaca-donchian-adx-vf-bot", // Pots actualitzar aquest enllaç si crees un repositori nou per a la tesi
+      skills: ["Python", "Deep Learning", "GNN", "Transformers (TFT)", "Alpaca API", "Algorithmic Trading", "Monte Carlo Simulations", "Data Science"],
     },
     {
       name: "ML-Market Predictor",
