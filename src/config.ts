@@ -9,8 +9,8 @@ export const siteConfig = {
     github: "https://github.com/MalbertMB",
   },
   aboutMe:
-    "I am a Computer Engineering student at the University of Barcelona with a strong focus on Deep Learning, Algorithmic Trading, and Software Architecture. I am passionate about applying Artificial Intelligence to solve complex problems, particularly within financial markets. I have hands-on experience training predictive models using PyTorch and Scikit-Learn, managing data pipelines with Pandas and NumPy, and bringing these solutions to life by integrating them with tools like the Alpaca API, Docker, and relational databases. Currently, I am focusing my bachelor's thesis on financial prediction using hybrid TFT-GNN architectures and stochastic risk validation through Monte Carlo simulations.",
-    
+    "I am a Computer Engineering student at the University of Barcelona with a strong focus on Machine Learning, Algorithmic Trading, and Software Architecture. I am passionate about applying Artificial Intelligence to solve complex problems, particularly within financial markets. I have hands-on experience training predictive models using PyTorch and Scikit-Learn, managing data pipelines with Pandas and NumPy, and bringing these solutions to life by integrating them with tools like the Alpaca API, Docker, and relational databases. Currently, I am focusing my bachelor's thesis on financial prediction using hybrid TFT-GNN architectures and stochastic risk validation through Monte Carlo simulations.",
+
   skillGroups: [
     {
       category: "Main Languages",
