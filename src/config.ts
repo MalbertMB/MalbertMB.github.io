@@ -13,16 +13,37 @@ export const siteConfig = {
   
   skillGroups: [
     {
+      category: "Main Languages",
+      skills: [
+        "Python",
+        "Java",
+        "C/C++",
+        "SQL",
+        "Bash"
+      ]
+    },
+    {
       category: "AI & Data Science",
-      skills: ["Machine Learning", "Scikit-Learn", "NumPy/Pandas", "Linear Algebra", "Data Structures & Algorithms (DSA)", "Statistical Modeling"]
+      skills: [
+        "Deep Learning (PyTorch)",
+        "GNN & Transformers (TFT)",
+        "Machine Learning (Scikit-Learn)",
+        "NumPy & Pandas",
+        "Monte Carlo Simulations",
+        "Reinforcement Learning"
+      ]
     },
     {
-      category: "Software Engineering",
-      skills: ["Python", "Java", "C++", "C", "Android (Java/XML)", "Reactive Programming (RxJava)", "SQLite/Database Design", "Firebase", "Cloudinary", "Git", "Docker"]
-    },
-    {
-      category: "Quantitative Finance",
-      skills: ["Algorithmic Trading", "Risk Management", "Technical Analysis", "Alpaca API"]
+      category: "Development",
+      skills: [
+        "Android (Java/XML)",
+        "Reactive Programming (RxJava)",
+        "Docker",
+        "Git",
+        "Firebase",
+        "Alpaca API (Quantitative Systems)",
+        "Cloudinary"
+      ]
     }
   ],
 
