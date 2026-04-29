@@ -9,8 +9,8 @@ export const siteConfig = {
     github: "https://github.com/MalbertMB",
   },
   aboutMe:
-    "I bridge the gap between complex mathematical theory and scalable software. Currently a Computer Engineering student at the University of Barcelona, I focus on the intersection of Reinforcement Learning and Financial Markets. Whether I'm optimizing Q-Learning agents to solve State Space problems or building full-stack mobile ecosystems, I thrive on transforming abstract concepts into tangible solutions. With a strong foundation in software engineering and a relentless drive for innovation, I'm eager to contribute to cutting-edge projects that push the boundaries of technology and finance.",
-  
+    "I am a Computer Engineering student at the University of Barcelona with a strong focus on Deep Learning, Algorithmic Trading, and Software Architecture. I am passionate about applying Artificial Intelligence to solve complex problems, particularly within financial markets. I have hands-on experience training predictive models using PyTorch and Scikit-Learn, managing data pipelines with Pandas and NumPy, and bringing these solutions to life by integrating them with tools like the Alpaca API, Docker, and relational databases. Currently, I am focusing my bachelor's thesis on financial prediction using hybrid TFT-GNN architectures and stochastic risk validation through Monte Carlo simulations.",
+    
   skillGroups: [
     {
       category: "Main Languages",
